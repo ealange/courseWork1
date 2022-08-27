@@ -1,11 +1,11 @@
 public class Employee {
-    private int employeeCounter = 0;
-    private int id;
+    private static int employeeCounter;
+    private final int id;
     private Person person;
-    private byte department;
+    private int department;
     private int salary;
 
-    public Employee(Person person, byte department, int salary) {
+    public Employee(Person person, int department, int salary) {
         this.person = person;
         this.department = department;
         this.salary = salary;
@@ -22,7 +22,7 @@ public class Employee {
         return person;
     }
 
-    public byte getDepartment() {
+    public int getDepartment() {
         return department;
     }
 
@@ -37,4 +37,16 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+    @Override
+    public String toString() {
+        return "Сотрудник: " +
+                "табельный номер: " + id +
+                "; " + person +
+                ", отдел: " + department +
+                ", заработная плата=" + salary +
+                '$';
+    }
+
+
 }

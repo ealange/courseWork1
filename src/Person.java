@@ -5,7 +5,7 @@ public class Person {
     private String surname;
     private String patronymic;
 
-    public Person(String name, String surname, String patronymic) {
+    public Person(String surname, String name, String patronymic) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
@@ -38,6 +38,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "ФИО: " + surname + name + patronymic;
+        return "ФИО: " + surname + ' ' + name + ' ' + patronymic;
     }
 }
